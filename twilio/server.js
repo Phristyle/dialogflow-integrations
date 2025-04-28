@@ -23,12 +23,12 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const projectId = 'Place your dialogflow projectId here';
-const phoneNumber = "Place your twilio phone number here";
-const accountSid = 'Place your accountSid here';
-const authToken = 'Place your authToken here';
+const projectId = 'civic-genius-458203-d9';
+const phoneNumber = "+5541998770848";
+const accountSid = 'AC1d81ef070bd7bcfdedf1b54249bd3138';
+const authToken = '26e207cae4c62a0cede358a72a410232';
 
-const client = require('twilio')(accountSid, authToken);
+const client = require('twilio')('AC1d81ef070bd7bcfdedf1b54249bd3138, 26e207cae4c62a0cede358a72a410232');
 const MessagingResponse = require('twilio').twiml.MessagingResponse;
 const sessionClient = new dialogflowSessionClient(projectId);
 
